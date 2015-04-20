@@ -10,7 +10,7 @@
 
 @protocol ABCIntroViewDelegate <NSObject>
 
--(void)onDoneButtonPressed;
+-(IBAction)onDoneButtonPressed;
 
 @end
 

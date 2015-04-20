@@ -12,17 +12,16 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
-		503AE10017EB989F00D1A890 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FB17EB989F00D1A890 /* AppController.mm */; };
 		503AE10117EB989F00D1A890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FC17EB989F00D1A890 /* main.m */; };
 		503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FF17EB989F00D1A890 /* RootViewController.mm */; };
 		521A8EA919F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
+		B92D5FD51AE5330B00C9A211 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92D5FD41AE5330B00C9A211 /* MapKit.framework */; };
+		B92D5FD81AE5331500C9A211 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92D5FD71AE5331500C9A211 /* CoreLocation.framework */; };
+		B92D5FDB1AE549B700C9A211 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B92D5FDA1AE549B700C9A211 /* MapViewController.m */; };
 		B9EA243A1AE4F833004CAE52 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9EA24391AE4F833004CAE52 /* Launch Screen.xib */; };
-		B9EA24431AE4F9A6004CAE52 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9EA243C1AE4F9A6004CAE52 /* AppDelegate.cpp */; };
-		B9EA24441AE4F9A6004CAE52 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9EA243E1AE4F9A6004CAE52 /* HelloWorldScene.cpp */; };
 		B9EA24471AE4FA94004CAE52 /* ABCIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9EA24461AE4FA94004CAE52 /* ABCIntroView.m */; };
 		B9EA244F1AE4FC3B004CAE52 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9EA244E1AE4FC3B004CAE52 /* Images.xcassets */; };
-		B9EA24521AE4FC4F004CAE52 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9EA24511AE4FC4F004CAE52 /* ViewController.m */; };
-		B9EA245C1AE4FE0D004CAE52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9EA245B1AE4FE0D004CAE52 /* Main.storyboard */; };
+		B9EA24521AE4FC4F004CAE52 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9EA24511AE4FC4F004CAE52 /* MainViewController.m */; };
 		B9EA24651AE50117004CAE52 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = B9EA24641AE50117004CAE52 /* AppDelegate.mm */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -65,8 +64,6 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
-		503AE0FA17EB989F00D1A890 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ios/AppController.h; sourceTree = SOURCE_ROOT; };
-		503AE0FB17EB989F00D1A890 /* AppController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppController.mm; path = ios/AppController.mm; sourceTree = SOURCE_ROOT; };
 		503AE0FC17EB989F00D1A890 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ios/main.m; sourceTree = SOURCE_ROOT; };
 		503AE0FD17EB989F00D1A890 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Prefix.pch; path = ios/Prefix.pch; sourceTree = SOURCE_ROOT; };
 		503AE0FE17EB989F00D1A890 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = ios/RootViewController.h; sourceTree = SOURCE_ROOT; };
@@ -77,17 +74,16 @@
 		5087E78817EB974C00C73F5D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		5087E78A17EB975400C73F5D /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		521A8EA819F11F5000D177D7 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		B92D5FD41AE5330B00C9A211 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.2.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
+		B92D5FD71AE5331500C9A211 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.2.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		B92D5FD91AE549B700C9A211 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		B92D5FDA1AE549B700C9A211 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		B9EA24391AE4F833004CAE52 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = SOURCE_ROOT; };
-		B9EA243C1AE4F9A6004CAE52 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppDelegate.cpp; sourceTree = "<group>"; };
-		B9EA243D1AE4F9A6004CAE52 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		B9EA243E1AE4F9A6004CAE52 /* HelloWorldScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelloWorldScene.cpp; sourceTree = "<group>"; };
-		B9EA243F1AE4F9A6004CAE52 /* HelloWorldScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloWorldScene.h; sourceTree = "<group>"; };
 		B9EA24451AE4FA94004CAE52 /* ABCIntroView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCIntroView.h; sourceTree = "<group>"; };
 		B9EA24461AE4FA94004CAE52 /* ABCIntroView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCIntroView.m; sourceTree = "<group>"; };
 		B9EA244E1AE4FC3B004CAE52 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		B9EA24501AE4FC4F004CAE52 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B9EA24511AE4FC4F004CAE52 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		B9EA245B1AE4FE0D004CAE52 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = SOURCE_ROOT; };
+		B9EA24501AE4FC4F004CAE52 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		B9EA24511AE4FC4F004CAE52 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		B9EA24631AE50117004CAE52 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ios/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		B9EA24641AE50117004CAE52 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = ios/AppDelegate.mm; sourceTree = SOURCE_ROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -104,6 +100,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B92D5FD81AE5331500C9A211 /* CoreLocation.framework in Frameworks */,
+				B92D5FD51AE5330B00C9A211 /* MapKit.framework in Frameworks */,
 				1AC6FB30180E99EB004C840B /* libcocos2d iOS.a in Frameworks */,
 				D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
@@ -125,8 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				5087E77117EB970100C73F5D /* res */,
-				503AE0FA17EB989F00D1A890 /* AppController.h */,
-				503AE0FB17EB989F00D1A890 /* AppController.mm */,
 				B9EA24631AE50117004CAE52 /* AppDelegate.h */,
 				B9EA24641AE50117004CAE52 /* AppDelegate.mm */,
 				503AE0FC17EB989F00D1A890 /* main.m */,
@@ -134,7 +130,6 @@
 				503AE0FE17EB989F00D1A890 /* RootViewController.h */,
 				503AE0FF17EB989F00D1A890 /* RootViewController.mm */,
 				B9EA24391AE4F833004CAE52 /* Launch Screen.xib */,
-				B9EA245B1AE4FE0D004CAE52 /* Main.storyboard */,
 			);
 			name = ios;
 			path = Classes;
@@ -173,6 +168,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B92D5FD71AE5331500C9A211 /* CoreLocation.framework */,
+				B92D5FD41AE5330B00C9A211 /* MapKit.framework */,
 				D6B0611A1803AB670077942B /* CoreMotion.framework */,
 				503AE11A17EB9C5A00D1A890 /* IOKit.framework */,
 				503AE11117EB99EE00D1A890 /* libcurl.dylib */,
@@ -227,10 +224,6 @@
 		B9EA243B1AE4F9A6004CAE52 /* cocos2d_part */ = {
 			isa = PBXGroup;
 			children = (
-				B9EA243C1AE4F9A6004CAE52 /* AppDelegate.cpp */,
-				B9EA243D1AE4F9A6004CAE52 /* AppDelegate.h */,
-				B9EA243E1AE4F9A6004CAE52 /* HelloWorldScene.cpp */,
-				B9EA243F1AE4F9A6004CAE52 /* HelloWorldScene.h */,
 			);
 			path = cocos2d_part;
 			sourceTree = "<group>";
@@ -238,8 +231,10 @@
 		B9EA24401AE4F9A6004CAE52 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B9EA24501AE4FC4F004CAE52 /* ViewController.h */,
-				B9EA24511AE4FC4F004CAE52 /* ViewController.m */,
+				B9EA24501AE4FC4F004CAE52 /* MainViewController.h */,
+				B9EA24511AE4FC4F004CAE52 /* MainViewController.m */,
+				B92D5FD91AE549B700C9A211 /* MapViewController.h */,
+				B92D5FDA1AE549B700C9A211 /* MapViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -339,7 +334,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				521A8EA919F11F5000D177D7 /* fonts in Resources */,
-				B9EA245C1AE4FE0D004CAE52 /* Main.storyboard in Resources */,
 				B9EA244F1AE4FC3B004CAE52 /* Images.xcassets in Resources */,
 				3EACC98F19EE6D4300EB3C5E /* res in Resources */,
 				B9EA243A1AE4F833004CAE52 /* Launch Screen.xib in Resources */,
@@ -353,12 +347,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9EA24521AE4FC4F004CAE52 /* ViewController.m in Sources */,
-				B9EA24431AE4F9A6004CAE52 /* AppDelegate.cpp in Sources */,
-				B9EA24441AE4F9A6004CAE52 /* HelloWorldScene.cpp in Sources */,
-				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				B9EA24521AE4FC4F004CAE52 /* MainViewController.m in Sources */,
 				B9EA24651AE50117004CAE52 /* AppDelegate.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				B92D5FDB1AE549B700C9A211 /* MapViewController.m in Sources */,
 				B9EA24471AE4FA94004CAE52 /* ABCIntroView.m in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 			);

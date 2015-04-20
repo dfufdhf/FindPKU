@@ -11,8 +11,6 @@
 @interface ABCIntroView () <UIScrollViewDelegate>
 @property (strong, nonatomic)  UIScrollView *scrollView;
 @property (strong, nonatomic)  UIPageControl *pageControl;
-@property UIView *holeView;
-@property UIView *circleView;
 @property UIButton *doneButton;
 
 @end
@@ -83,7 +81,7 @@
     
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.frame.size.height*.05, self.frame.size.width*.8, 60)];
     titleLabel.center = CGPointMake(self.center.x, self.frame.size.height*.1);
-    titleLabel.text = [NSString stringWithFormat:@"Pixifly"];
+    titleLabel.text = [NSString stringWithFormat:@"Map"];
     titleLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:40.0];
     titleLabel.textColor = [UIColor whiteColor];
     titleLabel.textAlignment =  NSTextAlignmentCenter;
@@ -94,13 +92,12 @@
     UIButton *imageview = [[UIButton alloc] initWithFrame:CGRectMake(self.frame.size.width*.1, self.frame.size.height*.16, self.frame.size.width*.8, self.frame.size.width*.8)];
     imageview.contentMode = UIViewContentModeScaleAspectFit;
     [imageview setImage:[UIImage imageNamed:@"Intro_Screen_One"] forState:UIControlStateNormal];
-    [imageview setImage:[UIImage imageNamed:@"Intro_Screen_Two"] forState:UIControlStateHighlighted];
     [imageview addTarget:self action:@selector(onFinishedIntroButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     
     [view addSubview:imageview];
     
     UILabel *descriptionLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.frame.size.width*.1, self.frame.size.height*.7, self.frame.size.width*.8, 60)];
-    descriptionLabel.text = [NSString stringWithFormat:@"Description for First Screen."];
+    descriptionLabel.text = [NSString stringWithFormat:@"Find your own way!"];
     descriptionLabel.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:18.0];
     descriptionLabel.textColor = [UIColor whiteColor];
     descriptionLabel.textAlignment =  NSTextAlignmentCenter;

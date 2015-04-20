@@ -9,6 +9,7 @@
 
 #import "AppDelegate.h"
 #import "cocos2d.h"
+#import "MainViewController.h"
 
 @interface AppDelegate ()
 
@@ -68,13 +69,18 @@
     
     ///2.Cocoa Part
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    MainViewController *_mainViewController = [MainViewController alloc];
     
-    UIStoryboard * storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    self.window.rootViewController = [storyBoard instantiateInitialViewController];
+    UINavigationController * navigationController = [UINavigationController alloc];
+    (void)[navigationController initWithRootViewController:_mainViewController];
+    [navigationController.navigationBar setHidden:YES];
+    [self.window setRootViewController:navigationController];
     
-    self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
+    //set white color for status bar
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    [self.window.rootViewController setNeedsStatusBarAppearanceUpdate];
     return YES;
 }
 
