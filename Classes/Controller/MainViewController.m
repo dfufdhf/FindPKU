@@ -20,6 +20,9 @@
         self.introView.backgroundColor = [UIColor greenColor];
         [self.view addSubview:self.introView];
     }
+    
+    _locationManager = [LocationManager sharedLocationManager];
+    [_locationManager startLocationService];
 }
 
 #pragma mark - ABCIntroViewDelegate Methods
@@ -30,11 +33,11 @@
 //    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 //    [defaults setObject:@"YES"forKey:@"intro_screen_viewed"];
 //    [defaults synchronize];
-    
+    MapViewController *_mapViewController = [[MapViewController alloc] init];
     [UIView animateWithDuration:1.0 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         self.introView.alpha = 0;
     } completion:^(BOOL finished) {
-        [self.introView removeFromSuperview];
+        [self.navigationController pushViewController:_mapViewController animated:YES];
     }];
 }
 

@@ -17,11 +17,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    _locationManager = [LocationManager sharedLocationManager];
+    _mapView = [[MapView alloc] initWithFrame:self.view.frame];
+    _mapView.MVdelegate = self;
+    [self.view addSubview:_mapView];
+    
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+    [self.navigationController setNeedsStatusBarAppearanceUpdate];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - MapViewDelegate
+
+-(IBAction)onTrackingModeButtonPressed
+{
+    _mapView.mapView.userTrackingMode = MKUserTrackingModeFollowWithHeading;
 }
 
 /*

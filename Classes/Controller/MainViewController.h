@@ -10,9 +10,10 @@
 #import "ABCIntroView.h"
 #import "MapViewController.h"
 
-@interface MainViewController : UIViewController<ABCIntroViewDelegate, MapViewControllerDelegate>
+@interface MainViewController : UIViewController<ABCIntroViewDelegate>
 
 @property (strong, nonatomic) ABCIntroView *introView;
+@property (strong, nonatomic) LocationManager *locationManager;
 
 -(IBAction)onDoneButtonPressed;
 

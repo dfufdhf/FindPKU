@@ -8,16 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import "MapView.h"
+#import "LocationManager.h"
 
-@protocol MapViewControllerDelegate
+@interface MapViewController : UIViewController<MapViewDelegate>
 
+@property (strong, nonatomic) MapView *mapView;
+@property (strong, nonatomic) LocationManager *locationManager;
 
-
-@end
-
-
-@interface MapViewController : UIViewController
-
-@property id<MapViewControllerDelegate> delegate;
 
 @end

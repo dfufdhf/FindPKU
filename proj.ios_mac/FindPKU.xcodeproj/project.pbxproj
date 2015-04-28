@@ -13,11 +13,14 @@
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		503AE10117EB989F00D1A890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FC17EB989F00D1A890 /* main.m */; };
-		503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FF17EB989F00D1A890 /* RootViewController.mm */; };
 		521A8EA919F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		B92D5FD51AE5330B00C9A211 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92D5FD41AE5330B00C9A211 /* MapKit.framework */; };
 		B92D5FD81AE5331500C9A211 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92D5FD71AE5331500C9A211 /* CoreLocation.framework */; };
 		B92D5FDB1AE549B700C9A211 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B92D5FDA1AE549B700C9A211 /* MapViewController.m */; };
+		B94373251AEF2DF200235EDF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B94373241AEF2DF200235EDF /* CoreData.framework */; };
+		B94373671AEF3A5900235EDF /* FindPKU.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B94373651AEF3A5900235EDF /* FindPKU.xcdatamodeld */; };
+		B9E2FF7A1AEBEED70029C595 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B990E55A1AE921CB00B4CAC8 /* LocationManager.m */; };
+		B9E2FF7D1AEBFFAE0029C595 /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E2FF7C1AEBFFAE0029C595 /* MapView.m */; };
 		B9EA243A1AE4F833004CAE52 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9EA24391AE4F833004CAE52 /* Launch Screen.xib */; };
 		B9EA24471AE4FA94004CAE52 /* ABCIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9EA24461AE4FA94004CAE52 /* ABCIntroView.m */; };
 		B9EA244F1AE4FC3B004CAE52 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9EA244E1AE4FC3B004CAE52 /* Images.xcassets */; };
@@ -66,8 +69,6 @@
 		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		503AE0FC17EB989F00D1A890 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ios/main.m; sourceTree = SOURCE_ROOT; };
 		503AE0FD17EB989F00D1A890 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Prefix.pch; path = ios/Prefix.pch; sourceTree = SOURCE_ROOT; };
-		503AE0FE17EB989F00D1A890 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = ios/RootViewController.h; sourceTree = SOURCE_ROOT; };
-		503AE0FF17EB989F00D1A890 /* RootViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = RootViewController.mm; path = ios/RootViewController.mm; sourceTree = SOURCE_ROOT; };
 		503AE11117EB99EE00D1A890 /* libcurl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.dylib; path = usr/lib/libcurl.dylib; sourceTree = SDKROOT; };
 		503AE11A17EB9C5A00D1A890 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		5087E77C17EB970100C73F5D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -78,6 +79,12 @@
 		B92D5FD71AE5331500C9A211 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.2.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
 		B92D5FD91AE549B700C9A211 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		B92D5FDA1AE549B700C9A211 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		B94373241AEF2DF200235EDF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.2.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
+		B94373661AEF3A5900235EDF /* FindPKU.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FindPKU.xcdatamodel; sourceTree = "<group>"; };
+		B990E5591AE921CB00B4CAC8 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		B990E55A1AE921CB00B4CAC8 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
+		B9E2FF7B1AEBFFAE0029C595 /* MapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapView.h; sourceTree = "<group>"; };
+		B9E2FF7C1AEBFFAE0029C595 /* MapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapView.m; sourceTree = "<group>"; };
 		B9EA24391AE4F833004CAE52 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = SOURCE_ROOT; };
 		B9EA24451AE4FA94004CAE52 /* ABCIntroView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCIntroView.h; sourceTree = "<group>"; };
 		B9EA24461AE4FA94004CAE52 /* ABCIntroView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCIntroView.m; sourceTree = "<group>"; };
@@ -100,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B94373251AEF2DF200235EDF /* CoreData.framework in Frameworks */,
 				B92D5FD81AE5331500C9A211 /* CoreLocation.framework in Frameworks */,
 				B92D5FD51AE5330B00C9A211 /* MapKit.framework in Frameworks */,
 				1AC6FB30180E99EB004C840B /* libcocos2d iOS.a in Frameworks */,
@@ -127,8 +135,6 @@
 				B9EA24641AE50117004CAE52 /* AppDelegate.mm */,
 				503AE0FC17EB989F00D1A890 /* main.m */,
 				503AE0FD17EB989F00D1A890 /* Prefix.pch */,
-				503AE0FE17EB989F00D1A890 /* RootViewController.h */,
-				503AE0FF17EB989F00D1A890 /* RootViewController.mm */,
 				B9EA24391AE4F833004CAE52 /* Launch Screen.xib */,
 			);
 			name = ios;
@@ -156,10 +162,11 @@
 			isa = PBXGroup;
 			children = (
 				46880B8319C43A87006E1F66 /* Classes */,
-				46880B7519C43A67006E1F66 /* Resources */,
-				1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */,
-				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				080E96DDFE201D6D7F000001 /* ios */,
+				B94373681AEF3A9100235EDF /* DB */,
+				46880B7519C43A67006E1F66 /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
 			name = CustomTemplate;
@@ -168,6 +175,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B94373241AEF2DF200235EDF /* CoreData.framework */,
 				B92D5FD71AE5331500C9A211 /* CoreLocation.framework */,
 				B92D5FD41AE5330B00C9A211 /* MapKit.framework */,
 				D6B0611A1803AB670077942B /* CoreMotion.framework */,
@@ -221,6 +229,14 @@
 			path = ios;
 			sourceTree = SOURCE_ROOT;
 		};
+		B94373681AEF3A9100235EDF /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				B94373651AEF3A5900235EDF /* FindPKU.xcdatamodeld */,
+			);
+			name = DB;
+			sourceTree = "<group>";
+		};
 		B9EA243B1AE4F9A6004CAE52 /* cocos2d_part */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +251,8 @@
 				B9EA24511AE4FC4F004CAE52 /* MainViewController.m */,
 				B92D5FD91AE549B700C9A211 /* MapViewController.h */,
 				B92D5FDA1AE549B700C9A211 /* MapViewController.m */,
+				B990E5591AE921CB00B4CAC8 /* LocationManager.h */,
+				B990E55A1AE921CB00B4CAC8 /* LocationManager.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -251,6 +269,8 @@
 			children = (
 				B9EA24451AE4FA94004CAE52 /* ABCIntroView.h */,
 				B9EA24461AE4FA94004CAE52 /* ABCIntroView.m */,
+				B9E2FF7B1AEBFFAE0029C595 /* MapView.h */,
+				B9E2FF7C1AEBFFAE0029C595 /* MapView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -347,10 +367,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9E2FF7A1AEBEED70029C595 /* LocationManager.m in Sources */,
 				B9EA24521AE4FC4F004CAE52 /* MainViewController.m in Sources */,
 				B9EA24651AE50117004CAE52 /* AppDelegate.mm in Sources */,
-				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				B92D5FDB1AE549B700C9A211 /* MapViewController.m in Sources */,
+				B9E2FF7D1AEBFFAE0029C595 /* MapView.m in Sources */,
+				B94373671AEF3A5900235EDF /* FindPKU.xcdatamodeld in Sources */,
 				B9EA24471AE4FA94004CAE52 /* ABCIntroView.m in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 			);
@@ -516,6 +538,20 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B94373651AEF3A5900235EDF /* FindPKU.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B94373661AEF3A5900235EDF /* FindPKU.xcdatamodel */,
+			);
+			currentVersion = B94373661AEF3A5900235EDF /* FindPKU.xcdatamodel */;
+			name = FindPKU.xcdatamodeld;
+			path = ios/FindPKU.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
 }

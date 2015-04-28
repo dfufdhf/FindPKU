@@ -10,11 +10,12 @@
 
 @protocol ABCIntroViewDelegate <NSObject>
 
+@required
 -(IBAction)onDoneButtonPressed;
 
 @end
 
 @interface ABCIntroView : UIView
-@property id<ABCIntroViewDelegate> delegate;
+@property (nonatomic,assign) id<ABCIntroViewDelegate> delegate;
 
 @end
