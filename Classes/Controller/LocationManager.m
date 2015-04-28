@@ -56,7 +56,7 @@ static LocationManager *_sharedLocationManager;
     [self setHasLocation:YES];
     [self setLocationError:nil];
     
-    CLLocationCoordinate2D coord = lastLocation.coordinate;
+    /*CLLocationCoordinate2D coord = lastLocation.coordinate;
     NSLog(@"Location lat/long: %f,%f",coord.latitude, coord.longitude);
     
     CLLocationAccuracy horizontalAccuracy =
@@ -79,7 +79,7 @@ static LocationManager *_sharedLocationManager;
     NSLog(@"Speed: %f meters per second",speed);
     
     CLLocationDirection direction = lastLocation.course;
-    NSLog(@"Course: %f degrees from true north",direction);
+    NSLog(@"Course: %f degrees from true north",direction);*/
     
 }
 

@@ -81,6 +81,18 @@
     //set white color for status bar
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     [self.window.rootViewController setNeedsStatusBarAppearanceUpdate];
+    
+    ///3.core data test
+    /*NSManagedObjectContext *context = [self managedObjectContext];
+    NSManagedObject *pkuregion = [NSEntityDescription insertNewObjectForEntityForName:@"PKURegion" inManagedObjectContext:context];
+    [pkuregion setValue:@39.3 forKey:@"longitude"];
+    [pkuregion setValue:@116.3 forKey:@"latitude"];
+    
+    NSError *error;
+    if(![context save:&error])
+        NSLog(@"Error!!!!");
+    */
+    
     return YES;
 }
 
@@ -121,6 +133,7 @@
      Called when the application is about to terminate.
      See also applicationDidEnterBackground:.
      */
+    [self saveContext];
 }
 
 
@@ -141,6 +154,9 @@
         return _managedObjectModel;
     }
     NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"FindPKU" withExtension:@"momd"];
+    
+    NSLog(@"%@",modelURL);
+    
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
 }
@@ -155,12 +171,16 @@
     
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"FindPKU.sqlite"];
+    
+    NSLog(@"%@",storeURL);
+    
     NSError *error = nil;
     
     BOOL dataFileAlreadyExists =
     [[NSFileManager defaultManager] fileExistsAtPath:[storeURL path]];
     
-    if (!dataFileAlreadyExists) {
+    ///以后可以启用这段代码，直接从导入一个用户数据库！！！在NSBundle位置建立一个存有数据的数据库，然后以下代码会在用户第一次启用本程序时将已有的sqlite文件复制到coredata位置下！！
+    /*if (!dataFileAlreadyExists) {
         NSString *bundleStore = [[NSBundle mainBundle] pathForResource:@"FindPKU" ofType:@"sqlite"];
         
         [[NSFileManager defaultManager] copyItemAtPath:bundleStore toPath:[storeURL path] error:&error];
@@ -168,7 +188,7 @@
         if (error) {
             NSLog(@"Error copying baked database: %@", error);
         }
-    }
+    }*/
     
     NSString *failureReason = @"There was an error creating or loading the application's saved data.";
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
