@@ -22,4 +22,6 @@
 @property (strong, nonatomic) UIButton *trackingModeButton;
 @property (assign, nonatomic) id<MapViewDelegate> MVdelegate;
 
+-(void) setRegion:(MKCoordinateRegion) region animated:(BOOL)animated;
+
 @end

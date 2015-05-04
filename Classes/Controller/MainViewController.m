@@ -13,26 +13,38 @@
 -(void)viewDidLoad {
     [super viewDidLoad];
     
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if (![defaults objectForKey:@"intro_screen_viewed"]) {
-        self.introView = [[ABCIntroView alloc] initWithFrame:self.view.frame];
-        self.introView.delegate = self;
-        self.introView.backgroundColor = [UIColor greenColor];
-        [self.view addSubview:self.introView];
-    }
+    /*
+     self.introView = [[ABCIntroView alloc] initWithFrame:self.view.frame];
+    self.introView.delegate = self;
+    self.introView.backgroundColor = [UIColor greenColor];
+    [self.view addSubview:self.introView];
+     */
     
     _locationManager = [LocationManager sharedLocationManager];
     [_locationManager startLocationService];
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    //这里有问题，需要仔细推敲一下，不知道为什么返回时候是黑屏的，
+    //if(self.introView == nil)
+    //{
+        self.introView = [[ABCIntroView alloc] initWithFrame:self.view.frame];
+        self.introView.delegate = self;
+        self.introView.backgroundColor = [UIColor greenColor];
+        [self.view addSubview:self.introView];
+    //}
+    //[self.view bringSubviewToFront:self.introView];
+    
+    //set white color for status bar
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    [self setNeedsStatusBarAppearanceUpdate];
+}
+
 #pragma mark - ABCIntroViewDelegate Methods
 
--(IBAction)onDoneButtonPressed{
-    
-//    Uncomment so that the IntroView does not show after the user clicks "DONE"
-//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//    [defaults setObject:@"YES"forKey:@"intro_screen_viewed"];
-//    [defaults synchronize];
+-(IBAction)onDoneButtonPressed
+{
     MapViewController *_mapViewController = [[MapViewController alloc] init];
     [UIView animateWithDuration:1.0 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         self.introView.alpha = 0;

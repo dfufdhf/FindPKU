@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
+#import "PKURegion.h"
+#import "AppDelegate.h"
 
 @interface LocationManager : NSObject <CLLocationManagerDelegate>
 
@@ -19,5 +21,6 @@
 
 +(LocationManager *) sharedLocationManager;
 -(void)startLocationService;
+-(void)updateRegions;
 
 @end

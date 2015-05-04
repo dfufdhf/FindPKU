@@ -20,11 +20,27 @@
     _locationManager = [LocationManager sharedLocationManager];
     _mapView = [[MapView alloc] initWithFrame:self.view.frame];
     _mapView.MVdelegate = self;
+    _mapView.mapView.delegate = self;
+    
+    /*
+    MKCoordinateRegion region;
+    region.center.latitude = _locationManager.location.coordinate.latitude;
+    region.center.longitude = _locationManager.location.coordinate.longitude;
+    region.span.latitudeDelta = 0.001;
+    region.span.longitudeDelta = 0.001;
+    [_mapView setRegion:region animated:YES];
+     */
+    
     [self.view addSubview:_mapView];
     
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
     [self.navigationController setNeedsStatusBarAppearanceUpdate];
+}
+
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,6 +54,19 @@
 {
     _mapView.mapView.userTrackingMode = MKUserTrackingModeFollowWithHeading;
 }
+
+#pragma mark - MKMapViewDelegate
+
+-(void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
+{
+    MKCoordinateRegion region;
+    region.center = _mapView.mapView.userLocation.coordinate;
+    region.span.latitudeDelta = 0.001;
+    region.span.longitudeDelta = 0.001;
+    //[_mapView setRegion:region animated:NO];
+}
+
+
 
 /*
 #pragma mark - Navigation

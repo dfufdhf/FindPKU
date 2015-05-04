@@ -41,6 +41,22 @@ static LocationManager *_sharedLocationManager;
     [self.locationManager startUpdatingHeading];
 }
 
+-(void)updateRegions
+{
+    NSManagedObjectContext *managedOC = ((AppDelegate *)[[UIApplication sharedApplication] delegate]).managedObjectContext;
+    NSError *error = nil;
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"PKURegion"];
+    NSArray *regions = [managedOC executeFetchRequest:request error:&error];
+    for(PKURegion *pkuregion in regions)
+    {
+        NSString *regionID = [[[pkuregion objectID] URIRepresentation] absoluteString];
+        CLLocationDistance monitorRadius = [pkuregion.regionRadius floatValue];
+        CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:[pkuregion coordinate] radius:monitorRadius identifier:regionID];
+        [[self locationManager] startMonitoringForRegion:region];
+        pkuregion.isMonitored = YES;
+    }
+}
+
 
 #pragma mark - CLLocationManagerDelegate methods
 
@@ -112,5 +128,7 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status
         [self setLocationError:nil];
     }
 }
+
+
 
 @end

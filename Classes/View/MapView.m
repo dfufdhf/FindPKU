@@ -39,11 +39,17 @@
     return self;
 }
 
+-(void) setRegion:(MKCoordinateRegion)region animated:(BOOL)animated
+{
+    region = [_mapView regionThatFits:region];
+    [_mapView setRegion:region animated:animated];
+}
+
+
 - (void)TrackingModeButtonPressed:(id)sender
 {
     [self.MVdelegate onTrackingModeButtonPressed];
 }
-
 
 /*
 // Only override drawRect: if you perform custom drawing.

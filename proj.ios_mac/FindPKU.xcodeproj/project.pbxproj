@@ -19,7 +19,9 @@
 		B92D5FDB1AE549B700C9A211 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B92D5FDA1AE549B700C9A211 /* MapViewController.m */; };
 		B94373251AEF2DF200235EDF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B94373241AEF2DF200235EDF /* CoreData.framework */; };
 		B94373671AEF3A5900235EDF /* FindPKU.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B94373651AEF3A5900235EDF /* FindPKU.xcdatamodeld */; };
-		B9E2FF7A1AEBEED70029C595 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B990E55A1AE921CB00B4CAC8 /* LocationManager.m */; };
+		B99D52111AF7AB7A00D26A53 /* DataStater.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D52101AF7AB7A00D26A53 /* DataStater.m */; };
+		B99D521C1AF7B3F300D26A53 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D521B1AF7B3F300D26A53 /* LocationManager.m */; };
+		B99D52211AF7C02900D26A53 /* PKURegion.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D52201AF7C02900D26A53 /* PKURegion.m */; };
 		B9E2FF7D1AEBFFAE0029C595 /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E2FF7C1AEBFFAE0029C595 /* MapView.m */; };
 		B9EA243A1AE4F833004CAE52 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9EA24391AE4F833004CAE52 /* Launch Screen.xib */; };
 		B9EA24471AE4FA94004CAE52 /* ABCIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9EA24461AE4FA94004CAE52 /* ABCIntroView.m */; };
@@ -81,8 +83,12 @@
 		B92D5FDA1AE549B700C9A211 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		B94373241AEF2DF200235EDF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.2.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
 		B94373661AEF3A5900235EDF /* FindPKU.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FindPKU.xcdatamodel; sourceTree = "<group>"; };
-		B990E5591AE921CB00B4CAC8 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
-		B990E55A1AE921CB00B4CAC8 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
+		B99D520F1AF7AB7A00D26A53 /* DataStater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataStater.h; path = "Data&LocationManager/DataStater.h"; sourceTree = "<group>"; };
+		B99D52101AF7AB7A00D26A53 /* DataStater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataStater.m; path = "Data&LocationManager/DataStater.m"; sourceTree = "<group>"; };
+		B99D521A1AF7B3F300D26A53 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationManager.h; path = "Data&LocationManager/LocationManager.h"; sourceTree = "<group>"; };
+		B99D521B1AF7B3F300D26A53 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationManager.m; path = "Data&LocationManager/LocationManager.m"; sourceTree = "<group>"; };
+		B99D521F1AF7C02900D26A53 /* PKURegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKURegion.h; path = ../../proj.ios_mac/ios/PKURegion.h; sourceTree = "<group>"; };
+		B99D52201AF7C02900D26A53 /* PKURegion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKURegion.m; path = ../../proj.ios_mac/ios/PKURegion.m; sourceTree = "<group>"; };
 		B9E2FF7B1AEBFFAE0029C595 /* MapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapView.h; sourceTree = "<group>"; };
 		B9E2FF7C1AEBFFAE0029C595 /* MapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapView.m; sourceTree = "<group>"; };
 		B9EA24391AE4F833004CAE52 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = SOURCE_ROOT; };
@@ -215,6 +221,7 @@
 				B9EA24401AE4F9A6004CAE52 /* Controller */,
 				B9EA24411AE4F9A6004CAE52 /* Model */,
 				B9EA24421AE4F9A6004CAE52 /* View */,
+				B99D520E1AF7AAF300D26A53 /* Data&LocationManager */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -237,6 +244,17 @@
 			name = DB;
 			sourceTree = "<group>";
 		};
+		B99D520E1AF7AAF300D26A53 /* Data&LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				B99D521A1AF7B3F300D26A53 /* LocationManager.h */,
+				B99D521B1AF7B3F300D26A53 /* LocationManager.m */,
+				B99D520F1AF7AB7A00D26A53 /* DataStater.h */,
+				B99D52101AF7AB7A00D26A53 /* DataStater.m */,
+			);
+			name = "Data&LocationManager";
+			sourceTree = "<group>";
+		};
 		B9EA243B1AE4F9A6004CAE52 /* cocos2d_part */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,8 +269,6 @@
 				B9EA24511AE4FC4F004CAE52 /* MainViewController.m */,
 				B92D5FD91AE549B700C9A211 /* MapViewController.h */,
 				B92D5FDA1AE549B700C9A211 /* MapViewController.m */,
-				B990E5591AE921CB00B4CAC8 /* LocationManager.h */,
-				B990E55A1AE921CB00B4CAC8 /* LocationManager.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -260,6 +276,8 @@
 		B9EA24411AE4F9A6004CAE52 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B99D521F1AF7C02900D26A53 /* PKURegion.h */,
+				B99D52201AF7C02900D26A53 /* PKURegion.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -278,9 +296,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D6058900D05DD3D006BFB54 /* FindPKU iOS */ = {
+		1D6058900D05DD3D006BFB54 /* FindPKU */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "FindPKU iOS" */;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "FindPKU" */;
 			buildPhases = (
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
@@ -291,7 +309,7 @@
 			dependencies = (
 				1AC6FB25180E99E1004C840B /* PBXTargetDependency */,
 			);
-			name = "FindPKU iOS";
+			name = FindPKU;
 			productName = iphone;
 			productReference = 1D6058910D05DD3D006BFB54 /* FindPKU iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -326,7 +344,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* FindPKU iOS */,
+				1D6058900D05DD3D006BFB54 /* FindPKU */,
 			);
 		};
 /* End PBXProject section */
@@ -367,11 +385,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9E2FF7A1AEBEED70029C595 /* LocationManager.m in Sources */,
+				B99D52211AF7C02900D26A53 /* PKURegion.m in Sources */,
 				B9EA24521AE4FC4F004CAE52 /* MainViewController.m in Sources */,
+				B99D52111AF7AB7A00D26A53 /* DataStater.m in Sources */,
 				B9EA24651AE50117004CAE52 /* AppDelegate.mm in Sources */,
 				B92D5FDB1AE549B700C9A211 /* MapViewController.m in Sources */,
 				B9E2FF7D1AEBFFAE0029C595 /* MapView.m in Sources */,
+				B99D521C1AF7B3F300D26A53 /* LocationManager.m in Sources */,
 				B94373671AEF3A5900235EDF /* FindPKU.xcdatamodeld in Sources */,
 				B9EA24471AE4FA94004CAE52 /* ABCIntroView.m in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
@@ -519,7 +539,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "FindPKU iOS" */ = {
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "FindPKU" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,

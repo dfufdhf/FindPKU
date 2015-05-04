@@ -78,9 +78,6 @@
     
     [self.window makeKeyAndVisible];
     
-    //set white color for status bar
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-    [self.window.rootViewController setNeedsStatusBarAppearanceUpdate];
     
     ///3.core data test
     /*NSManagedObjectContext *context = [self managedObjectContext];

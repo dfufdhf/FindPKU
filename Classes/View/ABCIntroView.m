@@ -46,7 +46,7 @@
         [self.doneButton setTintColor:[UIColor whiteColor]];
         [self.doneButton setTitle:@"Let's Go!" forState:UIControlStateNormal];
         [self.doneButton.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:18.0]];
-        self.doneButton.backgroundColor = [UIColor colorWithRed:0.153 green:0.533 blue:0.796 alpha:1.000];
+        [self.doneButton setBackgroundColor: [UIColor colorWithRed:0.153 green:0.533 blue:0.796 alpha:1.000]];
         self.doneButton.layer.borderColor = [UIColor colorWithRed:0.153 green:0.533 blue:0.796 alpha:1.000].CGColor;
         [self.doneButton addTarget:self action:@selector(onFinishedIntroButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
         self.doneButton.layer.borderWidth =.5;

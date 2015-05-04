@@ -11,7 +11,7 @@
 #import "MapView.h"
 #import "LocationManager.h"
 
-@interface MapViewController : UIViewController<MapViewDelegate>
+@interface MapViewController : UIViewController<MapViewDelegate,MKMapViewDelegate>
 
 @property (strong, nonatomic) MapView *mapView;
 @property (strong, nonatomic) LocationManager *locationManager;
