@@ -53,7 +53,7 @@ static LocationManager *_sharedLocationManager;
         CLLocationDistance monitorRadius = [pkuregion.regionRadius floatValue];
         CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:[pkuregion coordinate] radius:monitorRadius identifier:regionID];
         [[self locationManager] startMonitoringForRegion:region];
-        pkuregion.isMonitored = YES;
+        pkuregion.isMonitored = @YES;
     }
 }
 
@@ -72,10 +72,10 @@ static LocationManager *_sharedLocationManager;
     [self setHasLocation:YES];
     [self setLocationError:nil];
     
-    /*CLLocationCoordinate2D coord = lastLocation.coordinate;
+    CLLocationCoordinate2D coord = lastLocation.coordinate;
     NSLog(@"Location lat/long: %f,%f",coord.latitude, coord.longitude);
     
-    CLLocationAccuracy horizontalAccuracy =
+    /*CLLocationAccuracy horizontalAccuracy =
     lastLocation.horizontalAccuracy;
     
     NSLog(@"Horizontal accuracy: %f meters",horizontalAccuracy);

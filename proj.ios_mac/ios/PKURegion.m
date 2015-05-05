@@ -26,4 +26,15 @@
     return CLLocationCoordinate2DMake([[self latitude] doubleValue], [[self longitude] doubleValue]);
 }
 
+-(NSString*)title
+{
+    return self.regionName;
+}
+
+-(NSString*)subtitle
+{
+    return self.regionInfo;
+}
+
+
 @end

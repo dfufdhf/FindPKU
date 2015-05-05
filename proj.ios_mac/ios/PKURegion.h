@@ -11,7 +11,7 @@
 #import <MapKit/MapKit.h>
 
 
-@interface PKURegion : NSManagedObject
+@interface PKURegion : NSManagedObject<MKAnnotation>
 
 @property (nonatomic, retain) NSNumber * isMonitored;
 @property (nonatomic, retain) NSNumber * isDisplayed;

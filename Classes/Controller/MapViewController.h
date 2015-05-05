@@ -16,5 +16,5 @@
 @property (strong, nonatomic) MapView *mapView;
 @property (strong, nonatomic) LocationManager *locationManager;
 
-
+-(void)updateMapAnnotations;
 @end

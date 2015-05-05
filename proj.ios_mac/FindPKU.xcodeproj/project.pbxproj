@@ -19,7 +19,7 @@
 		B92D5FDB1AE549B700C9A211 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B92D5FDA1AE549B700C9A211 /* MapViewController.m */; };
 		B94373251AEF2DF200235EDF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B94373241AEF2DF200235EDF /* CoreData.framework */; };
 		B94373671AEF3A5900235EDF /* FindPKU.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B94373651AEF3A5900235EDF /* FindPKU.xcdatamodeld */; };
-		B99D52111AF7AB7A00D26A53 /* DataStater.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D52101AF7AB7A00D26A53 /* DataStater.m */; };
+		B99D52111AF7AB7A00D26A53 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D52101AF7AB7A00D26A53 /* DataManager.m */; };
 		B99D521C1AF7B3F300D26A53 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D521B1AF7B3F300D26A53 /* LocationManager.m */; };
 		B99D52211AF7C02900D26A53 /* PKURegion.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D52201AF7C02900D26A53 /* PKURegion.m */; };
 		B9E2FF7D1AEBFFAE0029C595 /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E2FF7C1AEBFFAE0029C595 /* MapView.m */; };
@@ -65,7 +65,7 @@
 		1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../cocos2d/build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
 		1ACB3243164770DE00914215 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1D6058910D05DD3D006BFB54 /* FindPKU iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FindPKU iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* FindPKU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindPKU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
@@ -83,8 +83,8 @@
 		B92D5FDA1AE549B700C9A211 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		B94373241AEF2DF200235EDF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.2.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
 		B94373661AEF3A5900235EDF /* FindPKU.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FindPKU.xcdatamodel; sourceTree = "<group>"; };
-		B99D520F1AF7AB7A00D26A53 /* DataStater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataStater.h; path = "Data&LocationManager/DataStater.h"; sourceTree = "<group>"; };
-		B99D52101AF7AB7A00D26A53 /* DataStater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataStater.m; path = "Data&LocationManager/DataStater.m"; sourceTree = "<group>"; };
+		B99D520F1AF7AB7A00D26A53 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataManager.h; path = "Data&LocationManager/DataManager.h"; sourceTree = "<group>"; };
+		B99D52101AF7AB7A00D26A53 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataManager.m; path = "Data&LocationManager/DataManager.m"; sourceTree = "<group>"; };
 		B99D521A1AF7B3F300D26A53 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationManager.h; path = "Data&LocationManager/LocationManager.h"; sourceTree = "<group>"; };
 		B99D521B1AF7B3F300D26A53 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationManager.m; path = "Data&LocationManager/LocationManager.m"; sourceTree = "<group>"; };
 		B99D521F1AF7C02900D26A53 /* PKURegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKURegion.h; path = ../../proj.ios_mac/ios/PKURegion.h; sourceTree = "<group>"; };
@@ -150,7 +150,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* FindPKU iOS.app */,
+				1D6058910D05DD3D006BFB54 /* FindPKU.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -249,8 +249,8 @@
 			children = (
 				B99D521A1AF7B3F300D26A53 /* LocationManager.h */,
 				B99D521B1AF7B3F300D26A53 /* LocationManager.m */,
-				B99D520F1AF7AB7A00D26A53 /* DataStater.h */,
-				B99D52101AF7AB7A00D26A53 /* DataStater.m */,
+				B99D520F1AF7AB7A00D26A53 /* DataManager.h */,
+				B99D52101AF7AB7A00D26A53 /* DataManager.m */,
 			);
 			name = "Data&LocationManager";
 			sourceTree = "<group>";
@@ -311,7 +311,7 @@
 			);
 			name = FindPKU;
 			productName = iphone;
-			productReference = 1D6058910D05DD3D006BFB54 /* FindPKU iOS.app */;
+			productReference = 1D6058910D05DD3D006BFB54 /* FindPKU.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -387,7 +387,7 @@
 			files = (
 				B99D52211AF7C02900D26A53 /* PKURegion.m in Sources */,
 				B9EA24521AE4FC4F004CAE52 /* MainViewController.m in Sources */,
-				B99D52111AF7AB7A00D26A53 /* DataStater.m in Sources */,
+				B99D52111AF7AB7A00D26A53 /* DataManager.m in Sources */,
 				B9EA24651AE50117004CAE52 /* AppDelegate.mm in Sources */,
 				B92D5FDB1AE549B700C9A211 /* MapViewController.m in Sources */,
 				B9E2FF7D1AEBFFAE0029C595 /* MapView.m in Sources */,
@@ -413,6 +413,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
@@ -447,6 +449,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;

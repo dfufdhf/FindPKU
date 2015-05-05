@@ -78,6 +78,10 @@
     
     [self.window makeKeyAndVisible];
     
+    [[DataManager sharedDataManager] setupData];
+    [[LocationManager sharedLocationManager] startLocationService];
+    [[LocationManager sharedLocationManager] updateRegions];
+    
     
     ///3.core data test
     /*NSManagedObjectContext *context = [self managedObjectContext];

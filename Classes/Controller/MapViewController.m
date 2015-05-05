@@ -32,6 +32,7 @@
      */
     
     [self.view addSubview:_mapView];
+    [self updateMapAnnotations];
     
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
@@ -55,17 +56,46 @@
     _mapView.mapView.userTrackingMode = MKUserTrackingModeFollowWithHeading;
 }
 
+-(MKOverlayRenderer*)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay
+{
+    if([overlay isKindOfClass:[MKCircle class]])
+    {
+        MKCircleRenderer *circle = [[MKCircleRenderer alloc]initWithOverlay:overlay];
+        circle.lineWidth = 2.0;
+        //circle.strokeColor = [UIColor blueColor];
+        circle.fillColor = [[UIColor redColor]colorWithAlphaComponent:0.1];
+        return circle;
+    }
+    return nil;
+}
+
 #pragma mark - MKMapViewDelegate
 
 -(void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
 {
-    MKCoordinateRegion region;
+    //如何调整地图的合适缩放级别
+    /*MKCoordinateRegion region;
     region.center = _mapView.mapView.userLocation.coordinate;
     region.span.latitudeDelta = 0.001;
     region.span.longitudeDelta = 0.001;
-    //[_mapView setRegion:region animated:NO];
+    [_mapView setRegion:region animated:NO];*/
 }
 
+-(void)updateMapAnnotations
+{
+    [_mapView.mapView removeAnnotations:_mapView.mapView.annotations];
+    [_mapView.mapView removeOverlays:_mapView.mapView.overlays];
+    
+    NSArray *regions = [DataManager sharedDataManager].regions;
+    [_mapView.mapView addAnnotations:regions];
+    
+    for(PKURegion *region in regions)
+    {
+        MKCircle *circle = [MKCircle circleWithCenterCoordinate:region.coordinate radius:[region.regionRadius doubleValue]];
+        [_mapView.mapView addOverlay:circle];
+    }
+    
+}
 
 
 /*

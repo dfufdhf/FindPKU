@@ -20,8 +20,8 @@
     [self.view addSubview:self.introView];
      */
     
-    _locationManager = [LocationManager sharedLocationManager];
-    [_locationManager startLocationService];
+    /*_locationManager = [LocationManager sharedLocationManager];
+    [_locationManager startLocationService];*/
 }
 
 -(void)viewWillAppear:(BOOL)animated
