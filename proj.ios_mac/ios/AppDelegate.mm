@@ -134,6 +134,7 @@
      Called when the application is about to terminate.
      See also applicationDidEnterBackground:.
      */
+    [[LocationManager sharedLocationManager] stopMonitorAllRegions];
     [self saveContext];
 }
 
@@ -177,8 +178,7 @@
     
     NSError *error = nil;
     
-    BOOL dataFileAlreadyExists =
-    [[NSFileManager defaultManager] fileExistsAtPath:[storeURL path]];
+    BOOL dataFileAlreadyExists = [[NSFileManager defaultManager] fileExistsAtPath:[storeURL path]];
     
     ///以后可以启用这段代码，直接从导入一个用户数据库！！！在NSBundle位置建立一个存有数据的数据库，然后以下代码会在用户第一次启用本程序时将已有的sqlite文件复制到coredata位置下！！
     /*if (!dataFileAlreadyExists) {
@@ -244,8 +244,7 @@
 #pragma mark Memory management
 
 - (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
-    /*
-     Free up as much memory as possible by purging cached data objects that can be recreated (or reloaded from disk) later.
+     /*Free up as much memory as possible by purging cached data objects that can be recreated (or reloaded from disk) later.
      */
 }
 

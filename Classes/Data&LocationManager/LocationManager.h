@@ -22,5 +22,6 @@
 +(LocationManager *) sharedLocationManager;
 -(void)startLocationService;
 -(void)updateRegions;
+-(void)stopMonitorAllRegions;
 
 @end

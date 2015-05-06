@@ -57,6 +57,14 @@ static LocationManager *_sharedLocationManager;
     }
 }
 
+-(void)stopMonitorAllRegions
+{
+    for(CLRegion *region in [self.locationManager monitoredRegions])
+    {
+        [self.locationManager stopMonitoringForRegion:region];
+    }
+}
+
 
 #pragma mark - CLLocationManagerDelegate methods
 

@@ -37,8 +37,8 @@ static DataManager *_sharedDataManager;
     [self addPKURegion:@"28楼"
             regionInfo:@"28号学生宿舍楼"
           regionRadius:@50
-              latitude:@39.98848242
-             longitude:@116.31032104
+              latitude:@39.988401
+             longitude:@116.310172
            isMonitored:NO
            isDisplayed:NO
              isEntered:NO
@@ -47,12 +47,43 @@ static DataManager *_sharedDataManager;
     [self addPKURegion:@"34B楼"
             regionInfo:@"34B号学生宿舍楼"
           regionRadius:@30
-              latitude:@39.9871016328
-             longitude:@116.3101941705
+              latitude:@39.987062
+             longitude:@116.310242
            isMonitored:NO
            isDisplayed:NO
              isEntered:NO
            isGoingNext:NO];
+    
+    [self addPKURegion:@"五四运动场"
+            regionInfo:@"五四运动场，篮球场，排球场，足球场都有哦~"
+          regionRadius:@120
+              latitude:@39.987599
+             longitude:@116.313606
+           isMonitored:NO
+           isDisplayed:NO
+             isEntered:NO
+           isGoingNext:NO];
+    
+    [self addPKURegion:@"遥感楼"
+            regionInfo:@"遥感与地理信息系统专业的大本营！"
+          regionRadius:@20
+              latitude:@39.993147
+             longitude:@116.312428
+           isMonitored:NO
+           isDisplayed:NO
+             isEntered:NO
+           isGoingNext:NO];
+    
+    [self addPKURegion:@"地学楼"
+            regionInfo:@"地小空和城小环的家~"
+          regionRadius:@50
+              latitude:@39.991720
+             longitude:@116.314553
+           isMonitored:NO
+           isDisplayed:NO
+             isEntered:NO
+           isGoingNext:NO];
+    
 }
 
 -(PKURegion *)addPKURegion:(NSString *)name
